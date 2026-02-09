@@ -1,0 +1,503 @@
+{
+  "@@locale": "en",
+
+  "appName": "WhyTheyBuy",
+  "@appName": {
+    "description": "The name of the application"
+  },
+
+  "home": "Home",
+  "@home": {
+    "description": "Home navigation label"
+  },
+
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings navigation label"
+  },
+
+  "addInvestorToTrack": "Add an investor to track",
+  "@addInvestorToTrack": {
+    "description": "CTA button label on home page"
+  },
+
+  "recommendedInvestors": "Recommended Investors",
+  "@recommendedInvestors": {
+    "description": "Section title for recommended investors"
+  },
+
+  "shuffle": "Shuffle",
+  "@shuffle": {
+    "description": "Shuffle button label"
+  },
+
+  "featuredInvestor": "Featured Investor",
+  "@featuredInvestor": {
+    "description": "Featured investor section title"
+  },
+
+  "disclaimer": "For educational purposes only. Not investment advice.",
+  "@disclaimer": {
+    "description": "Footer disclaimer text"
+  },
+
+  "manageAccountPreferences": "Manage your account and preferences",
+  "@manageAccountPreferences": {
+    "description": "Settings page subtitle"
+  },
+
+  "freePlan": "FREE PLAN",
+  "@freePlan": {
+    "description": "Free plan badge"
+  },
+
+  "upgradeToPro": "Upgrade to Pro",
+  "@upgradeToPro": {
+    "description": "Upgrade to pro title"
+  },
+
+  "upgradeDescription": "Monitor up to 10 investors, instant alerts, advanced AI summaries",
+  "@upgradeDescription": {
+    "description": "Upgrade benefits description"
+  },
+
+  "perMonth": "{price}/month",
+  "@perMonth": {
+    "description": "Price per month",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "example": "$9.99"
+      }
+    }
+  },
+
+  "perYear": "{price}/year",
+  "@perYear": {
+    "description": "Price per year",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "example": "$99"
+      }
+    }
+  },
+
+  "account": "Account",
+  "@account": {
+    "description": "Account section title"
+  },
+
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile menu item"
+  },
+
+  "notificationEmails": "Notification Emails",
+  "@notificationEmails": {
+    "description": "Notification emails menu item"
+  },
+
+  "changePassword": "Change Password",
+  "@changePassword": {
+    "description": "Change password menu item"
+  },
+
+  "preferences": "Preferences",
+  "@preferences": {
+    "description": "Preferences section title"
+  },
+
+  "language": "Language",
+  "@language": {
+    "description": "Language menu item"
+  },
+
+  "timezone": "Timezone",
+  "@timezone": {
+    "description": "Timezone menu item"
+  },
+
+  "support": "Support",
+  "@support": {
+    "description": "Support section title"
+  },
+
+  "helpCenter": "Help Center",
+  "@helpCenter": {
+    "description": "Help center menu item"
+  },
+
+  "sendFeedback": "Send Feedback",
+  "@sendFeedback": {
+    "description": "Send feedback menu item"
+  },
+
+  "termsOfService": "Terms of Service",
+  "@termsOfService": {
+    "description": "Terms of service menu item"
+  },
+
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Privacy policy menu item"
+  },
+
+  "signOut": "Sign Out",
+  "@signOut": {
+    "description": "Sign out button"
+  },
+
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Language selector title"
+  },
+
+  "selectTimezone": "Select Timezone",
+  "@selectTimezone": {
+    "description": "Timezone selector title"
+  },
+
+  "searchTimezones": "Search timezones...",
+  "@searchTimezones": {
+    "description": "Timezone search placeholder"
+  },
+
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "Edit profile sheet title"
+  },
+
+  "name": "Name",
+  "@name": {
+    "description": "Name field label"
+  },
+
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+
+  "saveChanges": "Save Changes",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+
+  "currentPassword": "Current Password",
+  "@currentPassword": {
+    "description": "Current password field label"
+  },
+
+  "newPassword": "New Password",
+  "@newPassword": {
+    "description": "New password field label"
+  },
+
+  "confirmNewPassword": "Confirm New Password",
+  "@confirmNewPassword": {
+    "description": "Confirm password field label"
+  },
+
+  "updatePassword": "Update Password",
+  "@updatePassword": {
+    "description": "Update password button"
+  },
+
+  "atLeast8Characters": "At least 8 characters",
+  "@atLeast8Characters": {
+    "description": "Password hint"
+  },
+
+  "addInvestor": "Add Investor",
+  "@addInvestor": {
+    "description": "Add investor modal title"
+  },
+
+  "searchByInvestorName": "Search by investor name...",
+  "@searchByInvestorName": {
+    "description": "Investor search placeholder"
+  },
+
+  "searchForInvestors": "Search for investors",
+  "@searchForInvestors": {
+    "description": "Empty search state message"
+  },
+
+  "trySearching": "Try \"ARK\", \"Berkshire\", or \"Bridgewater\"",
+  "@trySearching": {
+    "description": "Search suggestion hint"
+  },
+
+  "noInvestorsFound": "No investors found for \"{query}\"",
+  "@noInvestorsFound": {
+    "description": "No results message",
+    "placeholders": {
+      "query": {
+        "type": "String",
+        "example": "test"
+      }
+    }
+  },
+
+  "somethingWentWrong": "Something went wrong",
+  "@somethingWentWrong": {
+    "description": "Generic error message"
+  },
+
+  "trackingLimitReached": "Tracking Limit Reached",
+  "@trackingLimitReached": {
+    "description": "Limit reached dialog title"
+  },
+
+  "upgrade": "Upgrade",
+  "@upgrade": {
+    "description": "Upgrade button"
+  },
+
+  "login": "Login",
+  "@login": {
+    "description": "Login button/title"
+  },
+
+  "register": "Register",
+  "@register": {
+    "description": "Register button/title"
+  },
+
+  "forgotPassword": "Forgot Password",
+  "@forgotPassword": {
+    "description": "Forgot password link"
+  },
+
+  "password": "Password",
+  "@password": {
+    "description": "Password field label"
+  },
+
+  "dontHaveAccount": "Don't have an account?",
+  "@dontHaveAccount": {
+    "description": "Register prompt"
+  },
+
+  "alreadyHaveAccount": "Already have an account?",
+  "@alreadyHaveAccount": {
+    "description": "Login prompt"
+  },
+
+  "etfManager": "ETF Manager",
+  "@etfManager": {
+    "description": "ETF manager investor type"
+  },
+
+  "hedgeFund": "Hedge Fund",
+  "@hedgeFund": {
+    "description": "Hedge fund investor type"
+  },
+
+  "individual": "Individual",
+  "@individual": {
+    "description": "Individual investor type"
+  },
+
+  "unknown": "Unknown",
+  "@unknown": {
+    "description": "Unknown type"
+  },
+
+  "featured": "Featured",
+  "institutional": "Institutional",
+  "insider": "Insider",
+  "dailyEtf": "Daily ETF",
+  "sec13f": "SEC 13F",
+  "nPort": "N-PORT",
+  "form4": "Form 4",
+
+  "transparencyHigh": "High Transparency",
+  "@transparencyHigh": {
+    "description": "High transparency label"
+  },
+
+  "transparencyMedium": "Medium Transparency",
+  "@transparencyMedium": {
+    "description": "Medium transparency label"
+  },
+
+  "transparencyLow": "Low Transparency",
+  "@transparencyLow": {
+    "description": "Low transparency label"
+  },
+
+  "unlockAiInsights": "Unlock AI insights",
+  "@unlockAiInsights": {
+    "description": "Pro upgrade card title"
+  },
+
+  "getAiPoweredAnalysis": "Get AI-powered analysis and alerts",
+  "@getAiPoweredAnalysis": {
+    "description": "Pro upgrade card description"
+  },
+
+  "pro": "PRO",
+  "@pro": {
+    "description": "Pro badge"
+  },
+
+  "navigation": "NAVIGATION",
+  "@navigation": {
+    "description": "Navigation section header"
+  },
+
+  "liveTracking": "LIVE TRACKING",
+  "landingHeadline": "Track What Top Investors Are Buying",
+  "landingSubheadline": "Monitor institutional holdings in real-time. ARK ETFs, 13F filings, and AI-powered insights delivered to your inbox.",
+  "startFreeTrial": "Start Free Trial",
+  "viewDemo": "View Demo",
+  "realTimeUpdates": "Real-Time Updates",
+  "realTimeUpdatesDesc": "Daily ARK ETF trades and quarterly 13F filings",
+  "aiPoweredInsights": "AI-Powered Insights",
+  "aiPoweredInsightsDesc": "Understand why top investors are making moves",
+  "smartAlerts": "Smart Alerts",
+  "smartAlertsDesc": "Get notified when your watchlist moves",
+  "trustedByInvestors": "Trusted by 10,000+ investors",
+  "bankGradeSecurity": "Bank-grade security",
+  "realTimeData": "Real-time data",
+  "notFinancialAdvice": "Not financial advice. Data provided for informational purposes only.",
+  "signIn": "Sign In",
+
+  "portfolioOverview": "Portfolio Overview",
+  "sectorBreakdownActivity": "Sector breakdown & recent activity",
+  "totalHoldings": "Total Holdings",
+  "changes30d": "Changes (30d)",
+  "lastUpdate": "Last Update",
+  "latestSnapshot": "Latest snapshot",
+  "positions": "positions",
+  "sectorAllocation": "Sector Allocation",
+  "recentActivity": "Recent Activity",
+  "noHoldingsDataYet": "No holdings data available yet. Data will appear after the next ingestion cycle.",
+  "moreSectors": "+{count} more sectors",
+  "@moreSectors": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "holdingsSnapshot": "Holdings Snapshot",
+  "noHoldingsData": "No holdings data available",
+  "ticker": "Ticker",
+  "weight": "Weight",
+  "value": "Value",
+  "showTop10": "Show top 10",
+  "viewAllHoldings": "View all {count} holdings",
+  "@viewAllHoldings": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "basedOnPublicDisclosures": "Based on publicly disclosed holdings. This is not investment advice.",
+  "portfolioOverviewUnavailable": "Portfolio overview unavailable. Connect to backend to see sector breakdown and recent activity.",
+  "holdingsChanges": "Holdings Changes",
+  "last30Days": "Last 30 days",
+  "cancel": "Cancel",
+  "selectForReport": "Select for Report",
+  "nChanges": "{count} changes",
+  "@nChanges": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "noChangesLast30Days": "No changes in the last 30 days",
+  "topBuys": "Top Buys",
+  "topSells": "Top Sells",
+  "hideMoreChanges": "Hide {count} more changes",
+  "@hideMoreChanges": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "showMoreChanges": "Show {count} more changes",
+  "@showMoreChanges": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "nSelected": "{count} selected",
+  "@nSelected": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "clear": "Clear",
+  "generateReport": "Generate Report",
+  "shares": "shares",
+  "estimated": "Est.",
+  "aiReasoningLimit": "AI Reasoning Limit",
+  "freeUserReasoningLimit": "Free users can access AI reasoning for the Top 5 Buys and Top 5 Sells. Upgrade to Pro for unlimited AI analysis on all transactions.",
+  "evidence": "Evidence",
+  "possibleRationales": "Possible Rationales",
+  "hypothesis": "Hypothesis",
+  "aiReasoningUnavailable": "AI reasoning unavailable",
+  "connectBackendForAi": "Connect to backend with AI keys configured to see LLM-generated evidence and hypotheses for this stock.",
+  "failedToLoadInvestor": "Failed to load investor",
+  "generatingAnalysis": "Generating Sequential Analysis",
+  "fundamental": "Fundamental",
+  "news": "News",
+  "market": "Market",
+  "technical": "Technical",
+  "debate": "Debate",
+  "risk": "Risk",
+  "analysisUnavailable": "Analysis Unavailable",
+  "retry": "Retry",
+  "disclaimersLimitations": "Disclaimers & Limitations",
+  "whatWeDontKnow": "What We Don't Know",
+  "myInvestors": "My Investors",
+  "nTracked": "{count} tracked",
+  "@nTracked": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "defaultLabel": "DEFAULT",
+  "noInvestorsTrackedYet": "No investors tracked yet",
+  "addInvestorsToTrack": "Add investors to track their holdings and get AI-powered insights.",
+  "addYourFirstInvestor": "Add Your First Investor",
+  "addToWatchlist": "Add to Watchlist",
+  "addToWatchlistQuestion": "Add to Watchlist?",
+  "addToWatchlistDescription": "Add \"{name}\" to your watchlist to view their transactions and AI reasoning.",
+  "@addToWatchlistDescription": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "onlyWatchlistedInvestors": "Only watchlisted investors show transactions & AI insights.",
+  "addedToWatchlist": "{name} added to your watchlist",
+  "@addedToWatchlist": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "failedToAddInvestor": "Failed to add investor",
+  "investorLimitReached": "Investor Limit Reached",
+  "freeUserLimit": "Free users can track up to {count} investors. Upgrade to Pro to track up to 10 investors.",
+  "@freeUserLimit": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "proUserLimit": "Pro users can track up to {count} investors. Upgrade to Pro+ for unlimited tracking.",
+  "@proUserLimit": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "trackingLimitMessage": "You've reached your tracking limit of {count} investors.",
+  "@trackingLimitMessage": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "viewPlans": "View Plans",
+  "forEducationalPurposes": "For educational purposes only. Not investment advice.",
+  "changeTypeNew": "NEW",
+  "changeTypeAdded": "ADDED",
+  "changeTypeReduced": "REDUCED",
+  "changeTypeSold": "SOLD"
+}

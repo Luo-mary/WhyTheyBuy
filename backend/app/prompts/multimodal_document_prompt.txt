@@ -1,0 +1,3 @@
+Analyze the provided document image and respond in JSON format with document_type, key_information, holdings_mentioned, dates_referenced, numerical_data, extraction_confidence, limitations, and disclaimer. Respond ONLY with valid JSON.
+...
+WE INTENTIALLY REMOVE THE COMPLETE PROMPT

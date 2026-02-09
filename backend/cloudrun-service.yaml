@@ -1,0 +1,113 @@
+# Cloud Run Service Configuration for WhyTheyBuy API
+# Deploy with: gcloud run services replace cloudrun-service.yaml --region=us-central1
+
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: whytheybuy-api
+  labels:
+    cloud.googleapis.com/location: us-central1
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      annotations:
+        # Auto-scaling configuration
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "10"
+        # Cloud SQL connection
+        run.googleapis.com/cloudsql-instances: PROJECT_ID:REGION:INSTANCE_NAME
+        # CPU allocation
+        run.googleapis.com/cpu-throttling: "false"
+        run.googleapis.com/startup-cpu-boost: "true"
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: SERVICE_ACCOUNT_EMAIL
+      containers:
+        - image: gcr.io/PROJECT_ID/whytheybuy-api:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          env:
+            # GCP Configuration
+            - name: GCP_PROJECT_ID
+              value: "PROJECT_ID"
+            - name: GCP_REGION
+              value: "us-central1"
+
+            # Database - Cloud SQL
+            - name: USE_CLOUD_SQL_CONNECTOR
+              value: "true"
+            - name: CLOUD_SQL_INSTANCE_CONNECTION_NAME
+              value: "PROJECT_ID:REGION:INSTANCE_NAME"
+            - name: DB_USER
+              value: "postgres"
+            - name: DB_NAME
+              value: "whytheybuy"
+
+            # For direct connection (alternative to connector)
+            # - name: DATABASE_URL
+            #   value: "postgresql://user:password@/dbname?host=/cloudsql/PROJECT_ID:REGION:INSTANCE_NAME"
+
+            # Redis - Cloud Memorystore
+            - name: REDIS_HOST
+              value: "MEMORYSTORE_IP"
+            - name: REDIS_PORT
+              value: "6379"
+
+            # CORS - Production domains
+            - name: CORS_ORIGINS
+              value: "https://yourdomain.com,https://www.yourdomain.com"
+
+            # AI Provider
+            - name: AI_PROVIDER
+              value: "gemini"
+            - name: AI_MODEL
+              value: "gemini-3-flash-preview"   #"gemini-2.0-flash"
+            - name: GEMINI_MODEL
+              value: "gemini-3-flash-preview" #"gemini-2.0-flash"
+
+            # App configuration
+            - name: DEBUG
+              value: "false"
+            - name: APP_URL
+              value: "https://yourdomain.com"
+            - name: API_URL
+              value: "https://api.yourdomain.com"
+
+          # Secrets from Secret Manager
+          # These are mounted as environment variables
+          # - name: JWT_SECRET_KEY
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: jwt-secret-key
+          #       key: latest
+          # - name: GEMINI_API_KEY
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: gemini-api-key
+          #       key: latest
+
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 3
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            periodSeconds: 15
+            failureThreshold: 3
+  traffic:
+    - percent: 100
+      latestRevision: true

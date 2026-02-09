@@ -1,0 +1,3 @@
+Analyze the provided chart image and respond in JSON format with chart_type, key_observations, notable_patterns, data_points_identified, limitations, and disclaimer. Respond ONLY with valid JSON.
+...
+WE INTENTIALLY REMOVE THE COMPLETE PROMPT

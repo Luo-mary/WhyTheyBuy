@@ -1,0 +1,3 @@
+Provide an analysis of investor activity in a company in JSON format with company_overview, investor_activity_summary, possible_rationales, patterns_vs_history, what_is_unknown, and disclaimer fields. Respond ONLY with valid JSON.
+....
+WE INTENTIALLY REMOVE THE COMPLETE PROMPT.

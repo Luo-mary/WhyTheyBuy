@@ -1,0 +1,90 @@
+# Docker Compose for production-like local testing
+# This simulates the GCP environment locally
+# Usage: docker-compose -f docker-compose.prod.yml up
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: whytheybuy
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - DEBUG=false
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/whytheybuy
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET_KEY=dev-secret-key-change-in-production
+      - AI_PROVIDER=gemini
+      - AI_MODEL=gemini-3-flash-preview
+      - GEMINI_MODEL=gemini-3-flash-preview
+      # Add your API keys here for testing
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - CORS_ORIGINS=http://localhost:3000,http://localhost:8080
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    # No volume mount - simulates production
+    # No --reload - simulates production
+
+  celery_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.celery
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/whytheybuy
+      - REDIS_URL=redis://redis:6379/0
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  celery_beat:
+    build:
+      context: .
+      dockerfile: Dockerfile.celery
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/whytheybuy
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: celery -A app.worker beat --loglevel=info
+
+volumes:
+  postgres_data:
+  redis_data:

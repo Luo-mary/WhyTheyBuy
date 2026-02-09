@@ -1,0 +1,3 @@
+Provide analysis of investor holdings in JSON format with sector_analysis, pattern_analysis, thematic_connections, synthesis, reasoning_steps, unknowns, and disclaimer. Respond ONLY with valid JSON.
+...
+WE INTENTIALLY REMOVE THE COMPLETE PROMPT

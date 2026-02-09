@@ -1,0 +1,3 @@
+Provide a summary of investor holdings changes in JSON format with headline, what_changed, top_buys, top_sells, observations, interpretation_notes, limitations, and disclaimer fields. Respond ONLY with valid JSON.
+...
+WE INTENTIALLY REMOVE THE COMPLETE PROMPT

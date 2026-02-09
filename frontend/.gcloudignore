@@ -1,0 +1,22 @@
+# Ignore everything except what's needed for Docker build
+.dart_tool/
+.idea/
+.vscode/
+android/
+ios/
+linux/
+macos/
+windows/
+test/
+integration_test/
+*.iml
+*.log
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# Explicitly include build/web (don't ignore it)
+!build/
+!build/web/
+!build/web/**
